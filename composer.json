@@ -1,0 +1,17 @@
+{
+  "name": "florek/currencyconv",
+  "description": "Magento 2 Currency Converter",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^7.1.0"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Florek\\CurrencyConverter\\": ""
+    }
+  }
+}

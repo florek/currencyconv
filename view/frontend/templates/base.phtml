@@ -1,0 +1,35 @@
+<form class="form currency-converter"
+      action="<?= $block->escapeUrl($block->getUrl('currencyconverter/index/getconverted')) ?>"
+      id="currency-form"
+      method="post"
+      data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
+      data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset">
+        <legend class="legend"><span><?= $block->escapeHtml(__('Converter')) ?></span></legend><br />
+        <div class="field name required">
+            <label class="label" for="name"><span><?= $block->escapeHtml(__('Rub')) ?></span></label>
+            <div class="control">
+                <input name="currency_value" id="currency_value" title="<?= $block->escapeHtmlAttr(__('Currency Value')) ?>" value="" class="input-text" type="text" data-validate="{required:true, 'validate-number':true}"/>
+                <input type="hidden" name="currency_from" id="currency_from" value="RUB"/>
+                <input type="hidden" name="currency_to" id="currency_to" value="PLN" />
+            </div>
+        </div>
+        <div class="result"></div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <input type="hidden" name="hideit" id="hideit" value="" />
+            <button id="convert-button" type="button" title="<?= $block->escapeHtmlAttr(__('Convert')) ?>" class="action submit primary">
+                <span><?= $block->escapeHtml(__('Convert')) ?></span>
+            </button>
+        </div>
+    </div>
+</form>
+<script type="text/x-magento-init">
+{
+    "#convert-button":
+    {
+        "Florek_CurrencyConverter/js/currencyconverter": { }
+    }
+}
+</script>

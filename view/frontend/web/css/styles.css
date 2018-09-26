@@ -1,0 +1,11 @@
+@media only screen and (min-width: 1000px) {
+    .currency-converter {
+        width: 30%;
+    }
+}
+
+.result {
+    background-color: #c5d2df;
+    color: #ffffff;
+    text-align: center;
+}
