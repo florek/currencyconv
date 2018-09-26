@@ -10,8 +10,6 @@
             <label class="label" for="name"><span><?= $block->escapeHtml(__('Rub')) ?></span></label>
             <div class="control">
                 <input name="currency_value" id="currency_value" title="<?= $block->escapeHtmlAttr(__('Currency Value')) ?>" value="" class="input-text" type="text" data-validate="{required:true, 'validate-number':true}"/>
-                <input type="hidden" name="currency_from" id="currency_from" value="RUB"/>
-                <input type="hidden" name="currency_to" id="currency_to" value="PLN" />
             </div>
         </div>
         <div class="result"></div>
