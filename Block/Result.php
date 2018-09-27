@@ -23,7 +23,7 @@ class Result extends \Magento\Framework\View\Element\Template
         parent::__construct($context, $data);
     }
 
-    public function getResult()
+    public function getResult(): string
     {
         $currencyValueToConvert = $this->getRequest()->getParam('currency_value');
         if (!$this->_validator->isValid(['value' => $currencyValueToConvert])) {
