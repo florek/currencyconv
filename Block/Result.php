@@ -2,7 +2,7 @@
 
 namespace Florek\CurrencyConverter\Block;
 
-use Florek\CurrencyConverter\Service\Currency\Converter;
+use Florek\CurrencyConverter\Service\Api;
 use Florek\CurrencyConverter\Service\Currency\Validator;
 use Magento\Framework\View\Element\Template;
 
@@ -15,7 +15,7 @@ class Result extends \Magento\Framework\View\Element\Template
     public function __construct(
         Template\Context $context,
         Validator $validator,
-        Converter $converter,
+        Api $converter,
         array $data = []
     ) {
         $this->_validator = $validator;
